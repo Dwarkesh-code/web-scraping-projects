@@ -16,6 +16,7 @@ class NewsDetail:
 
         response = link_opner(url)
 
+
         if response is None:
             self.title = "N/A"
             self.date_time = "N/A"
@@ -26,10 +27,22 @@ class NewsDetail:
         soup = bsp(response.text, 'html.parser')
 
 
-        title = soup.select_one("h1.cMyCH span")
-        title = title.text if title else "N/A"
-        date_time =soup.select_one("div.Kx85U.innerbody div.AhY1R div.inl71 div.HRita.byline_action div.Lf73Q.byline span")
-        date_time = date_time.text if date_time else "N/A"
+        title = soup.select_one("h1")
+        if title :
+            title = title.get_text(strip = True)
+        else :
+            title = N/A
+
+
+        date_time =soup.select_one(" div.Lf73Q.byline span")
+        if date_time :
+            date_time =date_time.text
+        else :
+            date_time = soup.select_one(" div.xf8Pm.byline span")
+            if date_time :
+                date_time =date_time.text
+            else :
+                date_time = "N/A"
 
 
         self.link = link
@@ -82,6 +95,7 @@ def link_opner(url):
 
         response = requests.get(url, headers = headers , timeout = 10)
         response.raise_for_status()
+        response.encoding ="utf-8"
         return response
 
     except requests.exceptions.Timeout:
@@ -117,7 +131,7 @@ n = 0
 # targeted_tags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span']
 for link in all_links :
     link = link['href']
-    if "articleshow" in link:
+    if "articleshow" in link and "timesofindia.indiatimes.com" in link:
         n +=1
         print(n)
         proccess = NewsDetail(link)
