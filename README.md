@@ -8,7 +8,7 @@ run these command in your terminal
 2. python3 Project_Name.py
 
 **My Projects:**
-1. bs.py : This project scrape all Books at every page from "books.toscrape.com"
-2. qoute.py : This project scrape all Quotes at every page from "quotes.toscrape.com"
-3. job.py : This project scrape all job details like Job Title, Company Name, Location, Date from "https://realpython.github.io/fake-jobs/"
+1. bs.py : This project scrapes all Books at every page from "books.toscrape.com"
+2. qoute.py : This project scrapes all Quotes at every page from "quotes.toscrape.com"
+3. job.py : This project scrapes all job details like Job Title, Company Name, Location, Date from "https://realpython.github.io/fake-jobs/"
 4. news_scraper_auto.py : This project scrapes entire page of the Technology section of "The Time of India"  
