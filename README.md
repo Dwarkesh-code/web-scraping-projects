@@ -16,5 +16,7 @@ run these command in your terminal
 ![Job Scraper Output](screenshots/Job_scraper.png)
 4. news_scraper_auto.py : This script scrapes (News Title, Date and Time, News Link) entire page of the Technology section of "The Times of India"  
 ![News Scraper Output](screenshots/News_scraper.png)
+5. auto_scraper.py : This script can scrapes data from any website and ask to you what you want to scrape.
+![Auto Scraper Output](screenshots/Auto_scraper.png)
 
 These scripts add the scrape details to the .csv file after scraping.
