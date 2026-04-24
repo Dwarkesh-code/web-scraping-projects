@@ -18,5 +18,8 @@ run these command in your terminal
 ![News Scraper Output](screenshots/News_scraper.png)
 5. auto_scraper.py : This script scrapes data from any website and asks you what you want to scrape
 ![Auto Scraper Output](screenshots/Auto_scraper.png)
+6. weworkremotely_scraper.py : This script scrapes remote jobs from "weworkremotely.com"- extracts Title, Company Name, Location, 
+Salary, Job Type, Category, and Last Date to Apply from each job pages. Saves All details to a CSV file (Remoteok.csv) with duplicate prevention. 
+![WeWorkRemotely_scraper](screenshots/WeWorkRemotely_scraper.png)
 
 These scripts add the scrape details to the .csv file after scraping.
